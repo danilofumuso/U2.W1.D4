@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+.desktop {
+  background-color: #666666;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding-left: 4rem;
+  padding-block: 4rem;
+
+  height: 800px;
+  font-family: "Indie Flower", cursive;
+}
+
+.yellow {
+  background-color: #fdfdcd;
+}
+
+.green {
+  background-color: #cafccb;
+}
+
+.violet {
+  background-color: #cacafa;
+}
+
+.postit {
+  width: calc(25% - 4rem);
+  height: 40%;
+  justify-content: center;
+  position: relative;
+  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.5);
+}
+
+.postit h2 {
+  font-size: 72px;
+  font-weight: bold;
+  position: absolute;
+  top: 6rem;
+  left: 4rem;
+}
+
+.postit h3 {
+  font-size: 48px;
+  position: absolute;
+  left: 4rem;
+  bottom: 6rem;
+}
+
+.postit.n1 {
+  rotate: -5deg;
+}
+.postit.n2 {
+  rotate: 5deg;
+}
+.postit.n3 {
+  rotate: -5deg;
+}
+.postit.n4 {
+  rotate: 7deg;
+}
+.postit.n5 {
+  rotate: -7deg;
+}
+.postit.n6 {
+  rotate: -9deg;
+}
+.postit.n7 {
+  rotate: -2deg;
+}
+.postit.n8 {
+  rotate: 4deg;
+}
+
+.postit {
+  animation: postit-appearing 300ms;
+}
+
+@keyframes postit-appearing {
+  from {
+    transform: perspective(1000px) translateZ(2500px);
+  }
+  to {
+    transform: perspective(1000px) translateZ(0px);
+  }
+}
