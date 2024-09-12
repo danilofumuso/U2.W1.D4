@@ -28,7 +28,7 @@
   height: 40%;
   justify-content: center;
   position: relative;
-  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.5), inset 0px -75px 100px rgba(0, 0, 0, 0.1);
 }
 
 .postit h2 {
@@ -48,31 +48,35 @@
 
 .postit.n1 {
   rotate: -5deg;
+  animation: postit-appearing 300ms ease-in;
 }
 .postit.n2 {
-  rotate: 5deg;
+  rotate: 7deg;
+  animation: postit-appearing 300ms ease-in 120ms;
 }
 .postit.n3 {
   rotate: -5deg;
+  animation: postit-appearing 300ms ease-in 240ms;
 }
 .postit.n4 {
   rotate: 7deg;
+  animation: postit-appearing 300ms ease-in 360ms;
 }
 .postit.n5 {
   rotate: -7deg;
+  animation: postit-appearing 300ms ease-in 480ms;
 }
 .postit.n6 {
-  rotate: -9deg;
+  rotate: -12deg;
+  animation: postit-appearing 300ms ease-in 600ms;
 }
 .postit.n7 {
-  rotate: -2deg;
+  rotate: -5deg;
+  animation: postit-appearing 300ms ease-in 720ms;
 }
 .postit.n8 {
-  rotate: 4deg;
-}
-
-.postit {
-  animation: postit-appearing 300ms;
+  rotate: 6deg;
+  animation: postit-appearing 300ms ease-in 840ms;
 }
 
 @keyframes postit-appearing {
@@ -82,4 +86,10 @@
   to {
     transform: perspective(1000px) translateZ(0px);
   }
+}
+
+.postit:hover {
+  rotate: 0deg;
+  perspective: 1000px;
+  scale: 1.1;
 }
